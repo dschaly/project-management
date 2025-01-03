@@ -18,8 +18,7 @@ const DashboadLayout = ({ children }: { children: React.ReactNode }) => {
     } else {
       document.documentElement.classList.remove("dark");
     }
-
-  }, [])
+  });
 
   return (
     <div className="flex min-h-screen w-full bg-gray-50 text-gray-900">
@@ -27,7 +26,8 @@ const DashboadLayout = ({ children }: { children: React.ReactNode }) => {
       <Sidebar />
       <main
         className={`dark:bg-dark-bg flex w-full flex-col bg-gray-50 ${
-          !isSidebarCollapsed && "md:pl-64"}`}
+          !isSidebarCollapsed && "md:pl-64"
+        }`}
       >
         {/* navbar */}
         <Navbar />
